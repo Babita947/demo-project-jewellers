@@ -1,0 +1,14 @@
+p {
+    font-family: Lato;
+  }
+
+  .card-columns {
+    display: flex;
+    justify-content: space-between;
+  }
+.card {
+    width: 5rem;
+    height: 6rem;
+    font-size: xx-small;
+}
+  

@@ -1,0 +1,58 @@
+.main-header .sm-navigation .mobile-menu .mobile-center .logo-container img {
+    min-width: 100px;
+}
+.main-header .sm-navigation .mobile-menu .mobile-center .logo-container img {
+    max-height: 50px;
+    max-width: 150px;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.navbar {
+    padding:0px;
+    font-size: x-small;
+}
+
+.navbar-toggler i {
+ font-size: x-small;
+}
+
+button .navbar-toggler {
+    font-size: x-small;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.2rem 0.8rem !important;
+    font-size: 0.8em;
+}
+
+.img-responsive {
+ margin: 1em;
+}
+
+/* .navbar-nav li:active .navbar-nav-subcontent {
+    display: block !important; 
+} */
+
+.navbar-nav li .navbar-nav-subcontent {
+    display: none;
+}
+
+/* ul.navbar-nav li .nav-item.active {
+    display: block;
+} */
+
+ul li {
+    list-style: none;
+}
+
+
+

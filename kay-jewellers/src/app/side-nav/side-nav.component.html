@@ -1,0 +1,70 @@
+<nav class="navbar navbar-light bg-light navbar-expand-sm">
+  <div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarContent"
+      (click)="toggleMenu()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <i class="navbar-toggler fa-solid fa-location-dot"></i>
+  </div>
+
+  <a href="" data-di-id="di-id-4d71d105-f35de0df"
+    ><img
+      class="img-responsive"
+      width="55"
+      alt="Kay. The Diamond Store -Home"
+      src="https://www.kay.com/medias/kay-logo.svg?context=bWFzdGVyfGltYWdlc3w5NDIyfGltYWdlL3N2Zyt4bWx8YURVeEwyZ3hOUzh4TlRRek1UVTRPRFkzTlRZeE5DOXJZWGxmYkc5bmJ5NXpkbWN8MTBkNjE3ZDdiM2FkMzg1YjkyZjJiYzBhOGNiNzc0Y2M0MzQ1MjU3NTUwNzA3YzEwNDJjYTBhNmRlMTVhYzdmMQ"
+  /></a>
+
+  <div class="navbar-toggler">
+    <i class="fa-solid fa-truck"></i>
+    <i class="fa-solid fa-bag-shopping mx-2"></i>
+  </div>
+
+  <!-- <div >
+    <ul class="navbar-nav">
+      <li class="nav-item"  (click)="makeitActive()">
+        <span class="nav-link">First Linkl</span>
+        <ul class="navbar-nav-subcontent">
+          <li class="nav-item">
+            <span class="nav-link">First subLink</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">First subLink</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Second Linkl</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Third Linkl</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Fourth Linkl</a>
+      </li>
+    </ul>
+  </div> -->
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav">
+      <li
+        class="nav-item"
+        *ngFor="let item of navBarData"
+        [id]="item.id"
+        (click)="makeitActive(item.id)"
+        [class.active]="item.active"
+      >
+        <span class="nav-link">{{ item.name }}</span>
+        <ul class="navbar-nav-subcontent" *ngIf="item?.children?.length > 0">
+          <li class="nav-item" *ngFor="let child of item.children">
+            <span class="nav-link">{{ child.name }}</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
