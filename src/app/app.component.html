@@ -1,0 +1,114 @@
+<mat-sidenav-container class="mx-lg-5">
+  <mat-sidenav
+    (openedChange)="toggleMenu()"
+    class="sidenav"
+    #sidenav
+    mode="push"
+  >
+    <p>
+      <button mat-button (click)="sidenav.toggle()">Back</button>
+    </p>
+    <ul class="navbar-nav">
+      <li
+        class="nav-item"
+        *ngFor="let item of navBarData"
+        [id]="item.id"
+        (click)="makeitActive(item.id)"
+        [class.active]="item.active"
+      >
+        <span class="nav-link">{{ item.name }}</span>
+      </li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <app-static-header></app-static-header>
+    <app-nav [sidenav]="sidenav" [navBarData]="navBarData"> </app-nav>
+    <div class="content">
+      <div
+        style="
+          overflow: auto;
+          background-color: #000;
+          text-align: center;
+          font-size: medium;
+          line-height: 3em;
+          height: 3em;
+          font-family: Avenir Next LT W01 Demi, Myriad Pro, Arial, sans-serif;
+        "
+      >
+        &nbsp;<a href="/coupons-offers-and-deals?icid=GLOBAL:DEALS"
+          ><span bgcolor="#fafafa" style="color: #fff"
+            ><strong
+              ><span bgcolor="#FFF" style="color: #fff"
+                ><u>SHOP ALL DEALS</u></span
+              ></strong
+            ></span
+          ></a
+        >&nbsp;
+      </div>
+    </div>
+
+    <div>
+      <img
+        src="https://images-aka.kay.com/kay/homepage/2024/1.25/WMJ-24-001035_kay_1-25_1-28_hero_Sparkling_Svngs_dktp.jpg"
+        style="max-width: -webkit-fill-available"
+      />
+    </div>
+    <h2 style="text-align: center" class="m-2">BEST SELLERS</h2>
+    <div class="m-2">
+      <div class="custom-card">
+        <div class="m-2" *ngFor="let card of banners">
+          <img
+            class="img-banner"
+            width="100"
+            height="100"
+            [src]="card.url"
+            alt=""
+          />
+          <p class="img-text mt-1">{{ card.name }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-2">
+      <img
+        src="https://images-aka.kay.com/kay/deals/2024/1.25/HP-Hero-Banner_B.jpg"
+        style="max-width: -webkit-fill-available"
+      />
+    </div>
+
+    <div class="mt-4">
+      <img
+        src="https://images-aka.kay.com/kay/valentines-day-gift-guide/2024/k_valGG2024_50_forher_v2.jpg"
+        style="width: -webkit-fill-available; height: 40vw"
+      />
+    </div>
+    <div class="footer-base m-5 p-5">
+      <div class="container no-padding">
+        © KAY.COM
+        <span class="pull-right"
+          ><img
+            alt="Responsible Jewellery Council Logo"
+            class="rjc-img"
+            loading="lazy"
+            src="https://www.kay.com/_ui/responsive/theme-kay-outlet/images/RJC_FooterLogo.jpg"
+          /><a href="/privacy-policy?icid=FOOTER:PrivacyPoilcy"
+            >Privacy Policy</a
+          >
+          <span
+            alt="Do Not Sell or Share My Personal Information"
+            id="teconsent"
+            title="Do Not Sell or Share My Personal Information"
+          >
+            <span class="hide-mob"> | </span> </span
+          ><span class="hide-mob"> | </span>
+          <a href="/kay-legal-disclaimers?icid=FOOTER:TermsCond"
+            >Terms of Use</a
+          >
+          <span class="hide-mob"> | </span>
+          <a href="/sitemap">Site Map</a></span
+        >
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
