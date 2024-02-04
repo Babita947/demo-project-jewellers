@@ -1,9 +1,9 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.kayjewells.app',
-  appName: 'kay-jewells',
-  webDir: './dist/kay-jewellers',
+  appId: 'com.kay.app',
+  appName: 'kay-jewels',
+  webDir: 'www',
   server: {
     androidScheme: 'https'
   },
