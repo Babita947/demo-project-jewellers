@@ -22,15 +22,14 @@
     <ul class="navbar-nav">
       <li
         class="nav-item"
-        *ngFor="let item of navBarData"
+        *ngFor="let item of navBarData?.children"
         [id]="item.id"
-        [class.active]="item.active"
       >
         <span class="nav-link" [matMenuTriggerFor]="menu">{{ item.name }}</span>
         <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
 
         <mat-menu #menu="matMenu" class="menu-subcontent">
-          <button mat-menu-item *ngFor="let child of item.children">
+          <button mat-menu-item *ngFor="let child of item?.children">
             {{ child.name }}
           </button>
         </mat-menu>

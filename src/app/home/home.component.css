@@ -1,0 +1,21 @@
+.content {
+  color: black;
+  background-color: #fff;
+}
+
+.custom-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.img-text {
+  text-align: center;
+  text-decoration: underline;
+  font-size: xx-small;
+}
+
+.img-banner {
+  border: 0.1em solid lightgray;
+}

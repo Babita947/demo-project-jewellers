@@ -1,85 +1,84 @@
 .carousel-banner {
-    color: #FFFFFF;
-    overflow: auto;
-    background-color: #8B0000;
-    text-align: center;
-    font-size: medium;
-    line-height: normal;
+  color: #ffffff;
+  overflow: auto;
+  background-color: #8b0000;
+  text-align: center;
+  font-size: medium;
+  line-height: normal;
 }
 
 .main-header .sm-mystore-navigation {
-    height: 30wv;
-    background-color: #363636;
-    color: #fff;
-    font-size: medium;
-    padding: 0 10px;
-    align-items: center;
-    font-family: Open Sans Regular,Arial,sans-serif;
-    line-height: normal;
+  height: 30wv;
+  background-color: #363636;
+  color: #fff;
+  font-size: medium;
+  padding: 0 10px;
+  align-items: center;
+  line-height: normal;
 }
 
 .sm-mystore-navigation {
-    background-color: #474747;
-    color: #fff;
-    font-size: medium;
+  background-color: #474747;
+  color: #fff;
+  font-size: medium;
 }
 
-button, input, select, textarea {
-    background-color: #474747;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: 20px;
-    color: #fff;
-    border: none;
+button,
+input,
+select,
+textarea {
+  background-color: #474747;
+  font-size: inherit;
+  line-height: 20px;
+  color: #fff;
+  border: none;
 }
 
 .main-header .sm-mystore-navigation .select-store-text {
-    float: left;
-    margin-top: 16px;
+  float: left;
+  margin-top: 16px;
 }
 .main-header .sm-mystore-navigation .select-store-text {
-    background: 0 0;
-    border: none;
-    padding: 0;
-    line-height: 1;
-    letter-spacing: 0;
+  background: 0 0;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 top-links-mobile {
-    border-bottom: 1px solid #ebebeb;
-    font-size: medium;
+  border-bottom: 1px solid #ebebeb;
+  font-size: medium;
 }
 
 .top-links-mobile .nav-links-mobile {
-    padding: 5px;
-}
-
-a {
-    color: #515666;
-    text-decoration: none;
-    background: 0 0;
+  padding: 5px;
 }
 
 .top_mobile_icon {
-    height: 12px;
-    width: 12px;
-    display: inline-flex;
-    background-repeat: no-repeat;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5px;
+  height: 12px;
+  width: 12px;
+  display: inline-flex;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
 }
 
-ul  {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    font-size: medium;
-    margin-bottom: 0px;
-    padding: 5px;
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: medium;
+  margin-bottom: 0px;
+  padding: 5px;
 }
 
 .static-header {
-    height: 4em;
-    line-height: 4em;
+  height: 4em;
+  line-height: 4em;
+}
+
+li > a {
+  color: gray;
 }

@@ -1,71 +1,66 @@
 .main-header .sm-navigation .mobile-menu .mobile-center .logo-container img {
-    min-width: 100px;
+  min-width: 100px;
 }
 .main-header .sm-navigation .mobile-menu .mobile-center .logo-container img {
-    max-height: 50px;
-    max-width: 150px;
+  max-height: 50px;
+  max-width: 150px;
 }
 
 .navbar-toggler {
-    padding: 0.25rem 0.75rem;
-    font-size: medium;
-    line-height: 1;
-    background-color: transparent;
-    border: none;
-    border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  font-size: medium;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem;
 }
 
 .navbar {
-    padding:0px;
-    font-size: medium;
+  padding: 0px;
+  font-size: medium;
 }
 
 .navbar-toggler i {
- font-size: medium;
+  font-size: medium;
 }
 
 button .navbar-toggler {
-    font-size: medium;
+  font-size: medium;
 }
 
 .nav-link {
-    display: block;
-    padding: 0.2rem 0.8rem !important;
-    font-size:medium;
+  display: block;
+  padding: 0.2rem 0.8rem !important;
+  font-size: medium;
 }
 
 .img-responsive {
- margin: 1em;
- width: 10em;
+  margin: 1em;
+  width: 10em;
 }
-
-/* .navbar-nav li:active .navbar-nav-subcontent {
-    display: block !important; 
-} */
 
 .navbar-nav li .navbar-nav-subcontent {
-    display: none;
+  display: none;
 }
-
-/* ul.navbar-nav li .nav-item.active {
-    display: block;
-} */
 
 ul li {
-    list-style: none;
+  list-style: none;
 }
 
-::ng-deep .menu-subcontent, .mat-menu-item  {
-      line-height: normal;
-      font-size: medium;
-      background-color: #fff;
-      color: black;
-      text-align: center;
+::ng-deep .menu-subcontent,
+.mat-menu-item {
+  line-height: normal;
+  font-size: medium;
+  background-color: #fff;
+  color: black;
+  text-align: center;
 }
 
 .static-header {
-    line-height: 7em;
-    height: 7em;
+  line-height: normal;
+  height: 7em;
 }
 
-
+.navbar-nav {
+  flex-wrap: wrap;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { log } from 'console';
 
 @Component({
   selector: 'app-root',
@@ -7,160 +8,134 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'kay-jewellers';
-  banners: any = [
-    {
-      url: 'https://images-aka.kay.com/kay/homepage/2022/4.11/k_april22_hp_engagement.jpg',
-      price: '$110.99',
-      waspPrice: '$128.99',
-      name: 'RINGS',
-    },
-    {
-      url: 'https://images-aka.kay.com/kay/homepage/2023/10.2/WMJ-24-014116-BEST_SELLERS-NECKLACES-410x410.jpg',
-      price: '$1110.99',
-      waspPrice: '$1208.99',
-      name: 'NECKLACE',
-    },
-    {
-      url: 'https://images-aka.kay.com/kay/homepage/2022/5.19/k_may22_hp_earrings.jpg',
-      price: '$193.99',
-      waspPrice: '$195.99',
-      name: 'EARRINGS',
-    },
-    {
-      url: 'https://images-aka.kay.com/kay/homepage/2022/5.19/k_may22_hp_bracelets.jpg',
-      price: '$1193.99',
-      waspPrice: '$1195.99',
-      name: 'BRACELET',
-    },
-    {
-      url: 'https://www.kay.com/productimages/processed/V-994487205_0_260.jpg?pristine=true',
-      price: '$193.99',
-      waspPrice: '$195.99',
-      name: 'LAB-CROWN',
-    },
-    {
-      url: 'https://images-aka.kay.com/kay/homepage/2022/6.23/k_may22_hp_personalized.jpg',
-      price: '$1193.99',
-      waspPrice: '$1195.99',
-      name: 'PERSONALIZED',
-    },
-    {
-      url: 'https://www.kay.com/productimages/processed/V-023065509_0_260.jpg?pristine=true',
-      price: '$1193.99',
-      waspPrice: '$1195.99',
-      name: 'SHOP ALL',
-    },
-  ];
-  navBarData: any = [
-    {
-      id: 1,
-      name: 'DEALS',
-      active: false,
-      children: [
-        {
-          id: 2,
-          name: 'Featured Deals',
-          active: false,
-          children: [
-            {
-              id: 5,
-              name: 'Grandchild 1',
-              active: false,
-            },
-            {
-              id: 6,
-              name: 'Grandchild 2',
-              active: false,
-            },
-          ],
-        },
-        {
-          id: 3,
-          name: 'Clearance Deals',
-          active: false,
-        },
-      ],
-    },
-    {
-      id: 4,
-      name: 'ENGAGEMENT',
-      active: false,
-      children: [
-        {
-          id: 7,
-          name: 'Rings',
-          active: false,
-          children: [
-            {
-              id: 8,
-              active: false,
-              name: 'Grandchild 3',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: 9,
-      name: 'RINGS',
-      active: false,
-      children: [],
-    },
-    {
-      id: 10,
-      name: 'NECKLACE',
-      active: false,
-      children: [],
-    },
-    {
-      id: 11,
-      name: 'EARRINGS',
-      active: false,
-      children: [],
-    },
-    {
-      id: 12,
-      name: 'BRACELETS',
-      active: false,
-      children: [],
-    },
-    {
-      id: 13,
-      name: 'PERSONALIZED',
-      active: false,
-      children: [],
-    },
-    {
-      id: 14,
-      name: 'GIFTS',
-      active: false,
-      children: [],
-    },
-    {
-      id: 15,
-      name: 'SERVICES',
-      active: false,
-      children: [],
-    },
-  ];
-  originalData: any = [];
+
+  navBarData: any = {
+    isParent: true,
+    children: [
+      {
+        id: 1,
+        name: 'DEALS',
+        children: [
+          {
+            id: 2,
+            name: 'Featured Deals',
+            children: [
+              {
+                id: 21,
+                name: 'Up to 60% Off Valentine Day Deals',
+                url: 'https://www.kay.com/holiday-savings/c/9000001859?icid=MM:DEALS:VDAYDEALS',
+              },
+              {
+                id: 22,
+                name: '30-40% Off Everything',
+                url: 'featured-deals',
+              },
+              {
+                id: 23,
+                name: '40% Off 10-14K Gold',
+              },
+              {
+                id: 24,
+                name: '30% Off Fashion',
+              },
+              {
+                id: 25,
+                name: '30% Off Bridal',
+              },
+              {
+                id: 26,
+                name: '30% Off Personalized Fashion',
+              },
+            ],
+          },
+          {
+            id: 3,
+            name: 'Clearance Deals',
+          },
+        ],
+      },
+      {
+        id: 4,
+        name: 'ENGAGEMENT',
+        children: [
+          {
+            id: 7,
+            name: 'Rings',
+            children: [
+              {
+                id: 8,
+                name: 'Grandchild 3',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 9,
+        name: 'RINGS',
+        children: [],
+      },
+      {
+        id: 10,
+        name: 'NECKLACE',
+        children: [],
+      },
+      {
+        id: 11,
+        name: 'EARRINGS',
+        children: [],
+      },
+      {
+        id: 12,
+        name: 'BRACELETS',
+        children: [],
+      },
+      {
+        id: 13,
+        name: 'PERSONALIZED',
+        children: [],
+      },
+      {
+        id: 14,
+        name: 'GIFTS',
+        children: [],
+      },
+      {
+        id: 15,
+        name: 'SERVICES',
+        children: [],
+      },
+    ],
+  };
+  originalData: any = {};
   toggle: boolean = false;
 
   ngOnInit(): void {
     this.originalData = this.navBarData;
   }
 
-  makeitActive(id: number) {
+  expandAndCollapse(item: any) {
     // this.navBarData = this.originalData;
-    const children = this.navBarData.find(
-      (item: any) => item.id === id
-    )?.children;
-    if (children.length) {
-      this.navBarData = children;
+    if (item?.children?.length) {
+      if (!this.navBarData.isParent) {
+        item.index = this.navBarData.children.indexOf(item);
+      }
+      this.navBarData = item;
+    } else if (item?.url) {
+      window.location.href = item.url;
     }
   }
 
   toggleMenu() {
     this.navBarData = this.originalData;
+  }
+
+  back() {
+    // this.navBarData = this.originalData;
+    if (this.navBarData?.index !== undefined) {
+      this.navBarData = this.originalData.children[this.navBarData.index];
+    } else {
+      this.navBarData = this.originalData;
+    }
   }
 }
