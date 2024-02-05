@@ -7,11 +7,28 @@ import { HelpCenterComponent } from './help-center/help-center.component';
 import { FeaturedDealsComponent } from './featured-deals/featured-deals.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'favorite', component: FavoriteComponent },
-  { path: 'support-team', component: SupportTeamComponent },
-  { path: 'help-center', component: HelpCenterComponent },
-  { path: 'featured-deals', component: FeaturedDealsComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, data: { title: 'Home' } },
+  {
+    path: 'favorite',
+    component: FavoriteComponent,
+    data: { title: 'Favorites' },
+  },
+  {
+    path: 'support-team',
+    component: SupportTeamComponent,
+    data: { title: 'Text an Expert' },
+  },
+  {
+    path: 'help-center',
+    component: HelpCenterComponent,
+    data: { title: 'Help Center' },
+  },
+  {
+    path: 'featured-deals',
+    component: FeaturedDealsComponent,
+    data: { title: 'Feature Deals' },
+  },
   { path: '**', component: FeaturedDealsComponent },
 ];
 

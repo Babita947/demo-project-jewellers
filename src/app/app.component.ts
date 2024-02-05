@@ -124,7 +124,9 @@ export class AppComponent implements OnInit {
     // this.navBarData = this.originalData;
     if (item?.children?.length) {
       if (!this.navBarData.isParent) {
-        item.index = this.navBarData.children.indexOf(item);
+        item.index = this.originalData.children.findIndex(
+          (element: any) => element.id === this.navBarData.id
+        );
       }
       this.navBarData = item;
     } else if (item?.url) {

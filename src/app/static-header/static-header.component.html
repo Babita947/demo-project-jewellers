@@ -3,10 +3,14 @@
 >
   <a
     (click)="back()"
+    *ngIf="!checkConditionForBackButton()"
     class="icon fa-solid fa-arrow-left"
     aria-hidden="true"
   ></a>
-  <a href="" class="fa-solid fa-house"><span class="pl-2">Home</span></a>
+  <div class="col-2" *ngIf="checkConditionForBackButton()"></div>
+  <a href="" class="pl-2" style="text-decoration: none"
+    ><span style="font-size: larger">{{ title }}</span></a
+  >
   <div class="col-2 d-lg-none"></div>
 </div>
 <div
