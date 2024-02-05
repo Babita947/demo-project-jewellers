@@ -3,13 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-static-header',
   templateUrl: './static-header.component.html',
-  styleUrls: ['./static-header.component.css']
+  styleUrls: ['./static-header.component.css'],
 })
 export class StaticHeaderComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  back() {
+    history.back();
   }
-
 }

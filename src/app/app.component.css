@@ -1,36 +1,38 @@
-p {
-    font-family: Lato;
-  }
+.content {
+  color: black;
+  background-color: #fff;
+}
 
-  .custom-card {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
- 
-.img-text {
-  text-align: center;
+.sidenav {
+  width: 18rem;
+  font-size: small;
+  padding-left: 0.5rem;
+  background-color: #fff;
+  color: black;
+  transform: none;
+  visibility: visible;
+}
+
+li > span:hover {
   text-decoration: underline;
-  font-size: xx-small;
 }
 
-.img-banner {
-  border: 0.1em solid lightgray;
+.mat-sidenav-content {
+  height: 100vh;
 }
-    .content {
-      color: black;
-      background-color: #fff;
-      overflow: hidden;
-    }
 
-    .sidenav {
-      width: 8rem;
-      line-height: normal;
-      font-size: small;
-      padding-left: 1rem;
-      background-color: #fff;
-      color: black;
-      transform: none;
-      visibility: visible;
+.navbar-nav {
+  li {
+    background: #f8f9fa;
   }
+  li:nth-child(odd) {
+    background: #e9ecef;
+  }
+}
+
+.mat-drawer-content {
+  overflow: unset;
+}
+.mat-drawer-container {
+  background-color: #fff;
+}

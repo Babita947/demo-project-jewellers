@@ -1,25 +1,24 @@
-<div class="carousel-banner static-header">
-  Find the Perfect Valentine's Day Gift
-  <a href="/valentines-gift-guide?icid=ROTATING:GLOBAL:VDAYGG24">Shop Now</a>
+<div
+  class="carousel-banner static-header d-flex justify-content-between align-items-center p-3"
+>
+  <a
+    (click)="back()"
+    class="icon fa-solid fa-arrow-left"
+    aria-hidden="true"
+  ></a>
+  <a href="" class="fa-solid fa-house"><span class="pl-2">Home</span></a>
 </div>
 <div
   class="sm-mystore-navigation hidden-lg hidden-md mystore-geo static-header"
-  data-url="/store-finder/local-store"
+  data-url="https://www.kay.com/store-finder"
 >
-  <button
-    class="select-store-text"
-    data-origin-id="header"
-    data-toggle="modal"
-    data-target="#storeFinderFlyout"
-  >
-    Select Your Store
-  </button>
+  <button class="select-store-text">Select Your Store</button>
 </div>
 
 <div class="top-links-mobile static-header">
   <ul>
     <li>
-      <a href="/favorites" class="nav-links-mobile">
+      <a href="/favorite" class="nav-links-mobile">
         <span
           class="icon top_mobile_icon fa-regular fa-heart"
           aria-hidden="true"
@@ -28,7 +27,7 @@
       </a>
     </li>
     <li>
-      <a href="sms:+18552216255" class="nav-links-mobile">
+      <a href="/support-team" class="nav-links-mobile">
         <span
           class="icon top_mobile_icon fa-regular fa-comment"
           aria-hidden="true"
@@ -37,7 +36,7 @@
       </a>
     </li>
     <li>
-      <a href="/customer-service" class="nav-links-mobile">
+      <a href="/help-center" class="nav-links-mobile">
         <span
           class="icon top_mobile_icon fa-solid fa-gear"
           aria-hidden="true"
