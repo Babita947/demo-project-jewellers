@@ -51,6 +51,12 @@ export class AppComponent implements OnInit {
           {
             id: 3,
             name: 'Clearance Deals',
+            children: [
+              {
+                id: 31,
+                name: '10% Off Personalized Gifts',
+              },
+            ],
           },
         ],
       },
@@ -64,7 +70,7 @@ export class AppComponent implements OnInit {
             children: [
               {
                 id: 8,
-                name: 'Grandchild 3',
+                name: 'Wedding Rings',
               },
             ],
           },

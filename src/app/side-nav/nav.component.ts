@@ -12,4 +12,10 @@ export class NavComponent {
   sidenav!: MatSidenav;
   @Input() navBarData: any;
   toggle: boolean = false;
+
+  navigateToUrl(url: string) {
+    if (url) {
+      window.location.href = url;
+    }
+  }
 }

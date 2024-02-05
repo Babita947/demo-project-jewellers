@@ -26,12 +26,20 @@
         [id]="item.id"
       >
         <span class="nav-link" [matMenuTriggerFor]="menu">{{ item.name }}</span>
-        <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
-
         <mat-menu #menu="matMenu" class="menu-subcontent">
-          <button mat-menu-item *ngFor="let child of item?.children">
-            {{ child.name }}
-          </button>
+          <ng-container *ngFor="let child of item?.children">
+            <button mat-menu-item style="font-weight: bold">
+              {{ child.name }}
+            </button>
+            <button
+              mat-menu-item
+              class="ml-2"
+              *ngFor="let gchild of child?.children"
+              (click)="navigateToUrl(gchild.url)"
+            >
+              {{ gchild.name }}
+            </button>
+          </ng-container>
         </mat-menu>
       </li>
     </ul>
