@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">kay-jewels</string>
+    <string name="title_activity_main">kay-jewels</string>
+    <string name="package_name">com.kay.app</string>
+    <string name="custom_url_scheme">com.kay.app</string>
+</resources>
